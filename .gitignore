@@ -1,4 +1,6 @@
 node_modules/**/*
+~/.vscode-root
+.expo-shared
 .expo/*
 npm-debug.*
 *.jks
