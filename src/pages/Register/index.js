@@ -6,7 +6,8 @@ import { useNavigation } from '@react-navigation/native';
 //import { signInRequest } from '../../store/modules/actions/AuthActions';
 import { Styles } from './styles';
 
-function Login() {
+function Register() {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [secureTextEntry, setSecureTextEntry] = useState(true);
@@ -23,22 +24,29 @@ function Login() {
     </TouchableWithoutFeedback>
   );
 
-  function handleSingIn(e) {
+  function handleRegister(e) {
     e.preventDefault();
     //dispatch(signInRequest(email, password));
-    navigation.navigate('DefaultContainer');
+    navigation.navigate('Login');
   }
 
   return (
     <View style={Styles.Container}>
-      <Text style={Styles.Text}>Login</Text>
+      <Text style={Styles.Text}>Cadastre-se</Text>
+      <Input
+        style={Styles.Input}
+        label='Nome'
+        placeholder='Joe Doe'
+        value={name}
+        onChangeText={nextValue => setName(nextValue)}
+      />
       <Input
         style={Styles.Input}
         label='Email'
         placeholder='email@email.com'
         value={email}
         onChangeText={nextValue => setEmail(nextValue)}
-      />
+      />      
       <Input
         style={Styles.Input}
         value={password}
@@ -48,19 +56,16 @@ function Login() {
         secureTextEntry={secureTextEntry}
         onChangeText={nextValue => setPassword(nextValue)}
       />
-      <Button style={Styles.Button} appearance='outline' status='control' onPress={handleSingIn}>
-        Entrar
+      <Button style={Styles.Button} appearance='outline' status='control' onPress={handleRegister}>
+        Registrar
       </Button>
       <View style={Styles.ContainerButton}>
-        <Button appearance='ghost' status='control' onPress={() => navigation.navigate('EditPassword')}>
-          Esqueceu a senha?
-      </Button>
-        <Button appearance='ghost' status='control' onPress={() => navigation.navigate('Register')}>
-          Cadastre-se
+        <Button appearance='ghost' status='control' onPress={() => navigation.goBack()}>
+          Cancelar
       </Button>
       </View>
     </View>
   );
 }
 
-export default Login;
+export default Register;

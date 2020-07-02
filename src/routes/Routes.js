@@ -1,13 +1,13 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
+import { useSelector } from 'react-redux';
 
 import AuthContainer from './AuthContainer';
 import DefaultContainer from './DefaultContainer';
 
-
 const Stack = createStackNavigator();
 
-function Routes() {
+export default function Routes() {
   return (
     <>
       <Stack.Navigator
@@ -21,5 +21,3 @@ function Routes() {
     </>
   );
 }
-
-export default Routes;

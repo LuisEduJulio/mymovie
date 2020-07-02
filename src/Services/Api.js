@@ -1,7 +1,9 @@
 import axios from 'axios';
 
 const Api = axios.create({
-    baseURL: 'http://localhost:3333'
+    baseURL: 'https://api.themoviedb.org/3/'
 })
 
-export default Api;
+const token = '2a90aad7ded5b1412ecab1e5c0290766';
+
+export { Api, token } ;
