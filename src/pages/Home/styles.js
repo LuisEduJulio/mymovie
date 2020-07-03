@@ -7,5 +7,10 @@ export const Styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  Title: {
+    margin: 10,
+    fontSize: 20,
+    fontWeight: 'bold'
   }
 });

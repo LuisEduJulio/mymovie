@@ -1,25 +1,30 @@
 import React, { Fragment } from 'react';
 import { TouchableOpacity, Text, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { GenresList } from '../../Util/Genres';
+import { List } from '../../Util/List';
 import { Styles } from './styles';
 
-function Genres() {
+function Favorite() {
     const navigation = useNavigation();
-
+    
     return (
         <Fragment>
-            {GenresList.map((Items) =>
+            {List.map((Items) =>
                 <TouchableOpacity
                     style={Styles.container}
                     key={Items.key}
-                >   
+                    onPress={() => navigation.navigate('CategoryDetail', {
+                        imagem: Items.imagem,
+                        title: Items.title,
+                    })}
+                >
                     <Image source={Items.imagem} style={Styles.Imagem} />
                     <Text style={Styles.Title}>{Items.title}</Text>
                 </TouchableOpacity>
-            )}
+            )
+            }
         </Fragment >
     );
 }
 
-export default Genres;
+export default Favorite;

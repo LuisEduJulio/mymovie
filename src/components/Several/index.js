@@ -4,8 +4,9 @@ import { useNavigation } from '@react-navigation/native';
 import { List } from '../../Util/List';
 import { Styles } from './styles';
 
-function Category() {
+function Several() {
     const navigation = useNavigation();
+
     return (
         <Fragment>
             {List.map((Items) =>
@@ -17,8 +18,8 @@ function Category() {
                         title: Items.title,
                     })}
                 >
-                    <Image source={Items.imagem} style={Styles.Imagem} />
                     <Text style={Styles.Title}>{Items.title}</Text>
+                    <Image source={Items.imagem} style={Styles.Imagem} />
                 </TouchableOpacity>
             )
             }
@@ -26,4 +27,4 @@ function Category() {
     );
 }
 
-export default Category;
+export default Several;
