@@ -1,9 +1,9 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import Login from '../../pages/Login';
-import Register from '../../pages/Register';
-import EditPassword from '../../pages/EditPassword';
+import LoginScreen from '../../pages/LoginScreen';
+import RegisterScreen from '../../pages/RegisterScreen';
+import EditPasswordScreen from '../../pages/EditPasswordScreen';
 
 const Stack = createStackNavigator();
 
@@ -15,9 +15,9 @@ function AuthContainer() {
           headerShown: false
         }}
       >
-        <Stack.Screen component={Login} name='Login' />
-        <Stack.Screen component={Register} name='Register' />
-        <Stack.Screen component={EditPassword} name='EditPassword' />
+        <Stack.Screen component={LoginScreen} name='LoginScreen' />
+        <Stack.Screen component={RegisterScreen} name='RegisterScreen' />
+        <Stack.Screen component={EditPasswordScreen} name='EditPasswordScreen' />
       </Stack.Navigator>
     </>
   );

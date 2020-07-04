@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { Styles } from './styles';
 
-function CategoryDetail({ route }) {
+function CategoryDetailScreen({ route }) {
     const navigation = useNavigation();
 
     return (
@@ -14,7 +14,7 @@ function CategoryDetail({ route }) {
                     onPress={() => navigation.goBack()}
                     style={Styles.topContainer}
                 >
-                    <Ionicons name="md-arrow-round-back" size={24} color="#0B0B61" style={Styles.Icon} />
+                    <Ionicons name="md-arrow-round-back" size={24} color="#000" style={Styles.Icon} />
                 </TouchableOpacity>
             </View>
             <ScrollView>
@@ -44,4 +44,4 @@ function CategoryDetail({ route }) {
     );
 }
 
-export default CategoryDetail;
+export default CategoryDetailScreen;

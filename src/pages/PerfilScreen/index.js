@@ -5,7 +5,7 @@ import { Divider } from '@ui-kitten/components';
 import { Ionicons } from '@expo/vector-icons';
 import { Styles } from './styles';
 
-function Perfil() {
+function PerfilScreen() {
     const navigation = useNavigation();
     return (
         <View style={Styles.container}>
@@ -30,4 +30,4 @@ function Perfil() {
     );
 };
 
-export default Perfil;
+export default PerfilScreen;

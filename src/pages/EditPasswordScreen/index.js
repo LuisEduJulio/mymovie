@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 //import { signInRequest } from '../../store/modules/actions/AuthActions';
 import { Styles } from './styles';
 
-function Login() {
+function EditPasswordScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [secureTextEntry, setSecureTextEntry] = useState(true);
@@ -31,7 +31,7 @@ function Login() {
 
   return (
     <View style={Styles.Container}>
-      <Text style={Styles.Text}>Login</Text>
+      <Text style={Styles.Text}>Esqueceu sua senha?</Text>
       <Input
         style={Styles.Input}
         label='Email'
@@ -52,15 +52,12 @@ function Login() {
         Entrar
       </Button>
       <View style={Styles.ContainerButton}>
-        <Button appearance='ghost' status='control' onPress={() => navigation.navigate('EditPassword')}>
-          Esqueceu a senha?
-      </Button>
-        <Button appearance='ghost' status='control' onPress={() => navigation.navigate('Register')}>
-          Cadastre-se
-      </Button>
+        <Button appearance='ghost' status='control' onPress={() => navigation.goBack()}>
+          Cancelar
+        </Button>
       </View>
     </View>
   );
 }
 
-export default Login;
+export default EditPasswordScreen;

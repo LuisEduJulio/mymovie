@@ -19,15 +19,6 @@ export const Styles = StyleSheet.create({
         alignItems: 'flex-start',
         margin: 10,
         padding: 10,
-        shadowOffset: {
-            width: 0,
-            height: 1,
-        },
-        shadowOpacity: 0.22,
-        shadowRadius: 2.22,
-        elevation: 2,
-        borderColor: '#FFF',
-        borderWidth: 1
     },
     Imagem: {
         width: 200,

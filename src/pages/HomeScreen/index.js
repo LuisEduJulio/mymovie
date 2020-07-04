@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, ScrollView, Text } from 'react-native';
-import Favorite from '../../components/Favorite';
-import Genres from '../../components/Genres';
-import Several from '../../components/Several';
+import FavoriteList from '../../components/FavoriteList';
+import GenresList from '../../components/GenresList';
+import SeveralList from '../../components/SeveralList';
 import MovieList from '../../components/MovieList';
 import { Styles } from './styles';
 
-function Home() {
+function HomeScreen() {
   return (
     <View styles={Styles.container}>
       <ScrollView
@@ -19,21 +19,21 @@ function Home() {
           horizontal={true}
           showsHorizontalScrollIndicator={false}
         >
-          <Favorite />
+          <FavoriteList />
         </ScrollView>
         <Text style={Styles.Title}>Genêros</Text>
         <ScrollView
           horizontal={true}
           showsHorizontalScrollIndicator={false}
         >
-          <Genres />
+          <GenresList />
         </ScrollView>
         <Text style={Styles.Title}>Lançamentos</Text>
         <ScrollView
           horizontal={true}
           showsHorizontalScrollIndicator={false}
         >
-          <Several />
+          <SeveralList />
         </ScrollView>
         <Text style={Styles.Title}>Diversos</Text>
         <ScrollView
@@ -47,4 +47,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomeScreen;

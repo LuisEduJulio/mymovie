@@ -1,21 +1,32 @@
 import React, { Fragment } from 'react';
 import { TopNavigation, TopNavigationAction } from '@ui-kitten/components';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { Styles } from './styles';
 
 const SettingsIcon = (props) => (
     <Ionicons {...props} name='ios-settings' color='#FFF' size={25} />
 );
+const LogoutIcon = (props) => (
+    <MaterialCommunityIcons name="logout" size={24} color="#FFF" />
+);
 
 export const Header = () => {
     const navigation = useNavigation();
 
     function handlePerfil() {
-        navigation.navigate('Perfil')
+        navigation.navigate('PerfilScreen')
     }
+    
+    function handlePerfil() {
+        navigation.navigate('AuthContainer')
+    }
+
     const renderSettingsAction = () => (
-        <TopNavigationAction icon={SettingsIcon} onPress={handlePerfil} />
+        <Fragment>
+            <TopNavigationAction icon={SettingsIcon} onPress={handlePerfil} />
+            <TopNavigationAction icon={LogoutIcon} onPress={handlePerfil} />
+        </Fragment>
     );
 
     return (

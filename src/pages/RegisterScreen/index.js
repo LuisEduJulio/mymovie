@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 //import { signInRequest } from '../../store/modules/actions/AuthActions';
 import { Styles } from './styles';
 
-function Register() {
+function RegisterScreen() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -27,7 +27,7 @@ function Register() {
   function handleRegister(e) {
     e.preventDefault();
     //dispatch(signInRequest(email, password));
-    navigation.navigate('Login');
+    navigation.navigate('LoginScreen');
   }
 
   return (
@@ -68,4 +68,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default RegisterScreen;

@@ -28,7 +28,7 @@ function MovieList() {
                         <Text style={Styles.LegendMovie}>{Items.year}</Text>
                         <TouchableOpacity
                             style={Styles.Button}
-                            onPress={() => navigation.navigate('CategoryDetail', {
+                            onPress={() => navigation.navigate('CategoryDetailScreen', {
                                 imagem: Items.imagem,
                                 title: Items.title,
                             })}
