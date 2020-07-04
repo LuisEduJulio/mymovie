@@ -8,7 +8,15 @@ export const Styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'flex-start',
-        padding: 10             
+        padding: 10
+    },
+    Icon: {
+        margin: 30
+    },
+    topContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center'
     },
     Title: {
         color: '#000',
@@ -20,7 +28,7 @@ export const Styles = StyleSheet.create({
     Imagem: {
         height: 200,
         width: 180,
-        borderRadius: 5,  
+        borderRadius: 5,
         marginBottom: 10,
         shadowOffset: {
             width: 0,
@@ -28,7 +36,7 @@ export const Styles = StyleSheet.create({
         },
         shadowOpacity: 2,
         shadowRadius: 3,
-        elevation: 6,            
+        elevation: 6,
     },
     ContainerTitle: {
         display: 'flex',
@@ -63,5 +71,19 @@ export const Styles = StyleSheet.create({
     TextButton: {
         color: '#970E3E',
         fontWeight: 'bold'
+    },
+    TextTitle: {
+        margin: 10,
+        marginLeft: 15,
+        fontSize: 20,
+        fontWeight: 'bold',
+        backgroundColor: '#B40431',
+        color: '#FFF',
+        borderColor: '#970E3E',
+        borderWidth: 1,
+        width: 150,
+        padding: 2,
+        textAlign: 'center',
+        borderRadius: 50
     }
 });

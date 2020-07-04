@@ -18,7 +18,6 @@ export const Styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'flex-start',
         margin: 10,
-        backgroundColor: '#0B0B3B',
         padding: 10,
         shadowOffset: {
             width: 0,
@@ -53,13 +52,21 @@ export const Styles = StyleSheet.create({
     Title:{
         fontSize: 20,
         fontWeight: 'bold',
-        color: '#FFF',
+        color: '#000',
         marginTop: 10
     },
     Legend: {
         fontSize: 15,
         fontWeight: 'bold',
-        color: '#FFF'
+        color: '#6E6E6E'
+    },
+    Bold: {
+        fontWeight: 'bold'
+    },
+    TextDescribe:{
+        fontSize: 20,
+        color: '#1C1C1C',
+        marginTop: 10
     }
 
 });

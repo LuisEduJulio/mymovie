@@ -13,12 +13,15 @@ function Genres() {
                 <TouchableOpacity
                     style={Styles.container}
                     key={Items.key}
+                    onPress={() => navigation.navigate('GenresScreen', {
+                        title: Items.title,
+                    })}
                 >   
                     <Image source={Items.imagem} style={Styles.Imagem} />
                     <Text style={Styles.Title}>{Items.title}</Text>
                 </TouchableOpacity>
             )}
-        </Fragment >
+        </Fragment>
     );
 }
 

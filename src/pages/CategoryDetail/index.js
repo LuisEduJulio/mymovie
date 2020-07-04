@@ -33,7 +33,7 @@ function CategoryDetail({ route }) {
                         </View>
                     </View>
                     <View>
-                        <Text style={Styles.Title}>Sinopse: Sinopse é uma descrição 
+                        <Text style={Styles.TextDescribe}><Text style={Styles.Bold}>Sinopse:</Text> Sinopse é uma descrição 
                         sintética da ideia do filme. ... Ela não precisa especificar 
                         como o filme será feito, nem trazer detalhes da história que 
                         se quer contar, apenas as partes mais interessantes ou importantes.</Text>

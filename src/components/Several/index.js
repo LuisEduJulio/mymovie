@@ -18,8 +18,8 @@ function Several() {
                         title: Items.title,
                     })}
                 >
-                    <Text style={Styles.Title}>{Items.title}</Text>
                     <Image source={Items.imagem} style={Styles.Imagem} />
+                    <Text style={Styles.Title}>{Items.title}</Text>
                 </TouchableOpacity>
             )
             }

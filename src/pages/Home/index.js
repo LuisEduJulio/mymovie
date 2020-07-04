@@ -18,9 +18,6 @@ function Home() {
         <ScrollView
           horizontal={true}
           showsHorizontalScrollIndicator={false}
-          scrollEventThrottle={200}
-          decelerationRate="fast"
-          pagingEnabled
         >
           <Favorite />
         </ScrollView>

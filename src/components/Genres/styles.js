@@ -5,7 +5,7 @@ export const Styles = StyleSheet.create({
         margin: 10,
         borderRadius: 5,
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
     },
     Title: {
@@ -19,7 +19,6 @@ export const Styles = StyleSheet.create({
         height: 100,
         width: 100,
         marginTop: 10,
-        borderRadius: 5,
         borderColor: '#FFF',
         borderWidth: 1,
         borderRadius: 100
