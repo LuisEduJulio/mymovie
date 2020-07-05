@@ -18,14 +18,14 @@ export const Header = () => {
         navigation.navigate('PerfilScreen')
     }
     
-    function handlePerfil() {
+    function handleLogout() {
         navigation.navigate('AuthContainer')
     }
 
     const renderSettingsAction = () => (
         <Fragment>
             <TopNavigationAction icon={SettingsIcon} onPress={handlePerfil} />
-            <TopNavigationAction icon={LogoutIcon} onPress={handlePerfil} />
+            <TopNavigationAction icon={LogoutIcon} onPress={handleLogout} />
         </Fragment>
     );
 

@@ -11,13 +11,7 @@ export const Styles = StyleSheet.create({
     marginLeft: 15,
     fontSize: 20,
     fontWeight: 'bold',
-    backgroundColor: '#B40431',
-    color: '#FFF',
-    borderColor: '#970E3E',
-    borderWidth: 1,
-    width: 150,
+    color: '#B40431',
     padding: 2,
-    textAlign: 'center',
-    borderRadius: 50
   }
 });

@@ -14,7 +14,6 @@ export const Styles = StyleSheet.create({
         color: '#000',
         fontSize: 20,
         fontWeight: 'bold',
-        textAlign: 'center',
         marginTop: 20
     },
     Imagem: {
@@ -31,6 +30,7 @@ export const Styles = StyleSheet.create({
         elevation: 6,            
     },
     ContainerTitle: {
+        flex: 1,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
@@ -44,9 +44,9 @@ export const Styles = StyleSheet.create({
     },
     LegendMovie: {
         color: '#6E6E6E',
-        fontSize: 15,
+        fontSize: 17,
         fontWeight: 'bold',
-        textAlign: 'center'
+        width: 180
     },
     Button: {
         marginTop: 30,

@@ -2,16 +2,17 @@ import React, { Fragment, useEffect, useState } from 'react';
 import { TouchableOpacity, Text, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Api, Key, Image_base } from '../../Services/Api';
+import Img from '../../assets/vazio.png'
 import { Styles } from './styles';
 
-function SeveralList() {
+function TopratedList() {
     const [list, setList] = useState([]);
     const navigation = useNavigation();
 
     useEffect(() => {
         async function RequestList() {
             try {
-                const res = await Api.get(`/movie/upcoming?api_key=${Key}&&language=pt-BR&append_to_response=credits,videos,images&include_image_language=en,null`)
+                const res = await Api.get(`/movie/top_rated?api_key=${Key}&&language=pt-BR&append_to_response=credits,videos,images&include_image_language=en,null`)
                 setList(res.data.results)
                 console.log(list);
             } catch (err) {
@@ -33,17 +34,15 @@ function SeveralList() {
                         Date: Items.release_date,
                         Imdb: Items.vote_average,
                         Popularity: Items.popularity,
-                        Photo: Items.poster_path, 
+                        Photo: Items.poster_path,
                     })}
                 >
-                    <Image 
+                    <Image
                         source={{ uri: `${Image_base}${Items.poster_path}` }}
-                        resizeMode='stretch' 
-                        style={Styles.Imagem} 
+                        resizeMode='stretch'
+                        style={Styles.Imagem}
                     />
                     <Text style={Styles.Title}>{Items.title}</Text>
-                    
-                    <Text style={Styles.Title}>{Items.runtime}</Text>
                 </TouchableOpacity>
 
             )}
@@ -51,4 +50,4 @@ function SeveralList() {
     );
 }
 
-export default SeveralList;
+export default TopratedList;

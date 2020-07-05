@@ -4,6 +4,7 @@ import FavoriteList from '../../components/FavoriteList';
 import GenresList from '../../components/GenresList';
 import SeveralList from '../../components/SeveralList';
 import MovieList from '../../components/MovieList';
+import TopratedList from '../../components/TopratedList';
 import { Styles } from './styles';
 
 function HomeScreen() {
@@ -27,6 +28,13 @@ function HomeScreen() {
           showsHorizontalScrollIndicator={false}
         >
           <GenresList />
+        </ScrollView>
+        <Text style={Styles.Title}>Melhores do IMDB</Text>
+        <ScrollView
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+        >
+          <TopratedList />
         </ScrollView>
         <Text style={Styles.Title}>Lançamentos</Text>
         <ScrollView

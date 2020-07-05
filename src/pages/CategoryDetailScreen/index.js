@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Image, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { Image_base } from '../../Services/Api'
 import { Styles } from './styles';
 
 function CategoryDetailScreen({ route }) {
@@ -19,7 +20,7 @@ function CategoryDetailScreen({ route }) {
             <ScrollView>
                 <View style={Styles.Card}>
                     <View style={{ display: 'flex', flexDirection: 'row', flex: 1 }}>
-                        <Image source={route.params.Photo} style={Styles.Imagem} />
+                        <Image source={{ uri: `${Image_base}${route.params.Photo}` }} style={Styles.Imagem} />
                         <View style={Styles.containerDetail}>
                             <Text style={Styles.Title}>Titulo</Text>
                             <Text style={Styles.Legend}>{route.params.Title}</Text>
