@@ -6,7 +6,6 @@ import { Styles } from './styles';
 
 function CategoryDetailScreen({ route }) {
     const navigation = useNavigation();
-
     return (
         <View style={Styles.container}>
             <View>
@@ -19,24 +18,21 @@ function CategoryDetailScreen({ route }) {
             </View>
             <ScrollView>
                 <View style={Styles.Card}>
-                    <View style={{ display: 'flex', flexDirection: 'row' }}>
-                        <Image source={route.params.imagem} style={Styles.Imagem} />
+                    <View style={{ display: 'flex', flexDirection: 'row', flex: 1 }}>
+                        <Image source={route.params.Photo} style={Styles.Imagem} />
                         <View style={Styles.containerDetail}>
                             <Text style={Styles.Title}>Titulo</Text>
-                            <Text style={Styles.Legend}>{route.params.title}</Text>
+                            <Text style={Styles.Legend}>{route.params.Title}</Text>
                             <Text style={Styles.Title}>Ano</Text>
-                            <Text style={Styles.Legend}>{route.params.title}</Text>
-                            <Text style={Styles.Title}>Diretor</Text>
-                            <Text style={Styles.Legend}>{route.params.title}</Text>
-                            <Text style={Styles.Title}>Categória</Text>
-                            <Text style={Styles.Legend}>{route.params.title}</Text>
+                            <Text style={Styles.Legend}>{route.params.Date}</Text>
+                            <Text style={Styles.Title}>IMDB</Text>
+                            <Text style={Styles.Legend}>{route.params.Imdb}</Text>
+                            <Text style={Styles.Title}>Popularidade</Text>
+                            <Text style={Styles.Legend}>{route.params.Popularity}</Text>
                         </View>
                     </View>
                     <View>
-                        <Text style={Styles.TextDescribe}><Text style={Styles.Bold}>Sinopse:</Text> Sinopse é uma descrição 
-                        sintética da ideia do filme. ... Ela não precisa especificar 
-                        como o filme será feito, nem trazer detalhes da história que 
-                        se quer contar, apenas as partes mais interessantes ou importantes.</Text>
+                        <Text style={Styles.TextDescribe}><Text style={Styles.Bold}>Sinopse: </Text>{route.params.Describe}</Text>
                     </View>
                 </View>
             </ScrollView>

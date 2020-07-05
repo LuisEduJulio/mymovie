@@ -7,14 +7,15 @@ export const Styles = StyleSheet.create({
         width: 150,
         borderRadius: 5,
         display: 'flex',
-        alignItems: 'flex-start',
+        alignItems: 'center',
     },
     Title: {
         color: '#000',
-        fontSize: 15,
+        fontSize: 13,
         fontWeight: 'bold',
         marginTop: 5,
-        marginLeft: 4
+        marginLeft: 4,
+        textAlign: 'center'
     },
     Imagem: {
         height: 150,
