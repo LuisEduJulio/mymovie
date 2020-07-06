@@ -14,7 +14,7 @@ function CategoryDetailScreen({ route }) {
                     onPress={() => navigation.goBack()}
                     style={Styles.topContainer}
                 >
-                    <Ionicons name="md-arrow-round-back" size={24} color="#000" style={Styles.Icon} />
+                    <Ionicons name="md-arrow-round-back" size={24} color="#D3D3D3" style={Styles.Icon} />
                 </TouchableOpacity>
             </View>
             <ScrollView>

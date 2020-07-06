@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableWithoutFeedback } from 'react-native';
+import React, { useState, useRef } from 'react';
+import { View, Text, TouchableWithoutFeedback, Alert } from 'react-native';
 import { Icon, Input, Button } from '@ui-kitten/components';
-//import { useDispatch } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
-//import { signInRequest } from '../../store/modules/actions/AuthActions';
+import Firebase from '../../Services/Firebase';
 import { Styles } from './styles';
 
 function RegisterScreen() {
@@ -11,7 +10,8 @@ function RegisterScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [secureTextEntry, setSecureTextEntry] = useState(true);
-  //const dispatch = useDispatch();
+  const passwordRef = useRef();
+  const emailRef = useRef();
   const navigation = useNavigation();
 
   const toggleSecureEntry = () => {
@@ -24,10 +24,21 @@ function RegisterScreen() {
     </TouchableWithoutFeedback>
   );
 
-  function handleRegister(e) {
-    e.preventDefault();
-    //dispatch(signInRequest(email, password));
-    navigation.navigate('LoginScreen');
+  async function handleRegister(e) {
+
+    if (email === '' || password === '' || name === '') {
+      Alert.alert('Erro!', 'Entre com os dados corretos')
+    } else {
+      try {
+        await Firebase.register(name, email, password);
+
+        navigation.navigate('LoginScreen');
+
+      } catch (err) {
+        console.log(err);
+        Alert.alert('Falha!', 'Cadastre corretamente!');
+      }
+    }
   }
 
   return (
@@ -39,15 +50,21 @@ function RegisterScreen() {
         placeholder='Joe Doe'
         value={name}
         onChangeText={nextValue => setName(nextValue)}
+        returnKeyType='next'
+        onSubmitEditing={() => emailRef.current.focus()}
       />
       <Input
+        ref={emailRef}
         style={Styles.Input}
         label='Email'
         placeholder='email@email.com'
+        keyboardType='email-address'
         value={email}
         onChangeText={nextValue => setEmail(nextValue)}
-      />      
+        onSubmitEditing={() => passwordRef.current.focus()}
+      />
       <Input
+        ref={passwordRef}
         style={Styles.Input}
         value={password}
         label='Senha'

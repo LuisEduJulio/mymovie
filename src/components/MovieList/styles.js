@@ -11,7 +11,7 @@ export const Styles = StyleSheet.create({
         padding: 10             
     },
     Title: {
-        color: '#000',
+        color: '#808080',
         fontSize: 20,
         fontWeight: 'bold',
         marginTop: 20
@@ -27,7 +27,9 @@ export const Styles = StyleSheet.create({
         },
         shadowOpacity: 2,
         shadowRadius: 3,
-        elevation: 6,            
+        elevation: 6,
+        borderColor: '#FFF',
+        borderWidth: 1            
     },
     ContainerTitle: {
         flex: 1,
@@ -37,13 +39,13 @@ export const Styles = StyleSheet.create({
         marginLeft: 10,
     },
     TitleMovie: {
-        color: '#1C1C1C',
+        color: '#808080',
         fontSize: 18,
         fontWeight: 'bold',
         textAlign: 'center'
     },
     LegendMovie: {
-        color: '#6E6E6E',
+        color: '#C0C0C0',
         fontSize: 17,
         fontWeight: 'bold',
         width: 180

@@ -5,11 +5,12 @@ import GenresList from '../../components/GenresList';
 import SeveralList from '../../components/SeveralList';
 import MovieList from '../../components/MovieList';
 import TopratedList from '../../components/TopratedList';
+import { Layout } from '@ui-kitten/components';
 import { Styles } from './styles';
 
 function HomeScreen() {
   return (
-    <View styles={Styles.container}>
+    <Layout style={Styles.container} level='4'>
       <ScrollView
         horizontal={false}
         showsVerticalScrollIndicator={false}
@@ -51,7 +52,7 @@ function HomeScreen() {
           <MovieList />
         </ScrollView>
       </ScrollView>
-    </View>
+    </Layout>
   );
 }
 

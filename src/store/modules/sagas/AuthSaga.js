@@ -1,21 +1,25 @@
 import { all, takeLatest, call, put } from "redux-saga/effects";
-import Api from '../../../Services/Api';
+import { Api } from '../../../Services/Api';
 import { SIGN_IN_REQUEST, REGISTER_REQUESTER, SIGN_OUT_REQUEST } from '../actionsTypes';
 import { signInSuccess, signFailure } from '../actions/AuthActions';
 import { useNavigation } from '@react-navigation/native';
+import { Alert } from "react-native";
 
 
 export function* signIn({ payload }) {
-  
+
   try {
     const { email, password } = payload;
-
-    const response = yield call(Api.post, "session", {
+    Alert.alert('ag', 'hfh');
+    
+    const response = yield call(Api.post, "/session", {
       email,
       password
     });
 
     const { token } = response.data;
+
+    console.log(token);
 
     if (!token) {
       return;
@@ -25,7 +29,7 @@ export function* signIn({ payload }) {
 
     yield put(signInSuccess(token));
 
-  
+
   } catch (err) {
 
     yield put(signFailure());

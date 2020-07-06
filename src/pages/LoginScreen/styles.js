@@ -32,5 +32,11 @@ export const Styles = StyleSheet.create({
         justifyContent: 'center', 
         alignItems: 'center', 
         marginTop: 30
+    },
+    Caption: {
+        color: '#FFF',
+        fontWeight: 'bold',
+        fontSize:12,
+        marginTop: 40
     }
 });

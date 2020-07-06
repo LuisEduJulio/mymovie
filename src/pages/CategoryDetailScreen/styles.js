@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native';
 export const Styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FFF',
+        backgroundColor: '#000',
     },    
     Icon: {
         margin: 30
@@ -43,20 +43,22 @@ export const Styles = StyleSheet.create({
     Title:{
         fontSize: 20,
         fontWeight: 'bold',
-        color: '#000',
-        marginTop: 10
+        color: '#FFF',
+        marginTop: 10,
     },
     Legend: {
         fontSize: 15,
         fontWeight: 'bold',
-        color: '#6E6E6E'
+        color: '#D3D3D3',
+        width: 150
     },
     Bold: {
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: '#FFF'
     },
     TextDescribe:{
         fontSize: 20,
-        color: '#1C1C1C',
+        color: '#D3D3D3',
         marginTop: 10
     }
 

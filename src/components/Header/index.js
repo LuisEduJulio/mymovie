@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { TopNavigation, TopNavigationAction } from '@ui-kitten/components';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import Firebase from '../../Services/Firebase';
 import { Styles } from './styles';
 
 const SettingsIcon = (props) => (
@@ -19,6 +20,7 @@ export const Header = () => {
     }
     
     function handleLogout() {
+        Firebase.logout();
         navigation.navigate('AuthContainer')
     }
 
