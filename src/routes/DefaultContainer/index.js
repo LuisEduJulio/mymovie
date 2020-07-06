@@ -21,7 +21,6 @@ function DefaultContainer() {
         <Stack.Screen component={HomeScreen} name='HomeScreen' />
         <Stack.Screen component={CategoryDetailScreen} name='CategoryDetailScreen' />
         <Stack.Screen component={PerfilScreen} name='PerfilScreen' />
-        <Stack.Screen component={GenresScreen} name='GenresScreen' />
       </Stack.Navigator>
     </>
   );

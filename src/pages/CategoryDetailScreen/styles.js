@@ -60,6 +60,19 @@ export const Styles = StyleSheet.create({
         fontSize: 20,
         color: '#D3D3D3',
         marginTop: 10
+    },
+    ButtonFavorite: {
+        marginTop: 15,
+        backgroundColor: '#FFF',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 5,
+        borderRadius: 5 
+    },
+    TeextButton: {
+        color: '#970E3E',
+        fontWeight: 'bold'
     }
 
 });

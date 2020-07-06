@@ -59,6 +59,7 @@ function LoginScreen() {
         style={Styles.Input}
         label='Email'
         placeholder='email@email.com'
+        keyboardType='email-address'
         value={email}
         onChangeText={value => setEmail(value)}
         returnKeyType='next'

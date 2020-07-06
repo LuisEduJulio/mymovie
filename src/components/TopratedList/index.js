@@ -25,7 +25,6 @@ function TopratedList() {
         RequestList();
     }, [])
 
-
     return (
         <Fragment>
             {loading && <ActivityIndicator size='large' color='#970E3E' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} />}

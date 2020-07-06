@@ -3,7 +3,6 @@ import { View, TouchableOpacity, Text, Image, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Divider } from '@ui-kitten/components';
 import { Ionicons } from '@expo/vector-icons';
-import { List } from '../../Util/List';
 import { Styles } from './styles';
 
 function GenresScreen({ route }) {
