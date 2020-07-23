@@ -12,9 +12,4 @@ const Image_base ='https://image.tmdb.org/t/p/original'
 
 Api.defaults.headers.common['Authorization'] = Token;
 
-const Teste = axios.create({
-    baseURL: 'http://localhost:3333'
-})
-
-
-export { Api, Token, Key, Image_base, Teste } ;
+export { Api, Token, Key, Image_base } ;

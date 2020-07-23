@@ -2,7 +2,8 @@ import React, { useState, useRef } from 'react';
 import { View, Text, TouchableWithoutFeedback, ActivityIndicator } from 'react-native';
 import { Icon, Input, Button } from '@ui-kitten/components';
 import { useNavigation } from '@react-navigation/native';
-import Firebase from '../../Services/Firebase';
+import { useDispatch } from 'react-redux';
+import { signInRequest } from '../../store/modules/actions/AuthActions';
 import { Styles } from './styles';
 
 function LoginScreen() {
@@ -13,6 +14,7 @@ function LoginScreen() {
   const [loading, setLoading] = useState(false);
   const [captionText, setCaptionText] = useState('');
   const navigation = useNavigation();
+  const dispatch = useDispatch();
 
   const toggleSecureEntry = () => {
     setSecureTextEntry(!secureTextEntry);
@@ -38,10 +40,8 @@ function LoginScreen() {
       setCaptionText('');
 
       try {
-        await Firebase.login(email, password);
-        setTimeout(() => setLoading(false), 6000);
+        dispatch(signInRequest(email, password));
 
-        navigation.navigate('DefaultContainer');
       } catch (err) {
         console.log(err);
         setCaptionText('Dados Incorretos!');

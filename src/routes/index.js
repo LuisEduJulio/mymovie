@@ -6,8 +6,8 @@ import DefaultContainer from './DefaultContainer';
 
 const Stack = createStackNavigator();
 
-export default function Routes() {
-  return (
+export default function createRouter(isSigned = false) {
+  return !isSigned ? (
     <>
       <Stack.Navigator
         screenOptions={{
@@ -15,8 +15,17 @@ export default function Routes() {
         }}
       >
         <Stack.Screen component={AuthContainer} name='AuthContainer' />
-        <Stack.Screen component={DefaultContainer} name='DefaultContainer' />
       </Stack.Navigator>
     </>
-  );
+  ) : (
+      <>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false
+          }}
+        >
+          <Stack.Screen component={DefaultContainer} name='DefaultContainer' />
+        </Stack.Navigator>
+      </>
+    );
 }

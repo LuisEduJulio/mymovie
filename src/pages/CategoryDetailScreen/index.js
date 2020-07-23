@@ -17,8 +17,6 @@ function CategoryDetailScreen({ route }) {
         photo: JSON.stringify(route.params.photo),
       });
     const navigation = useNavigation();
-
-    const {title} = route.params;
     console.log(JSON.stringify(title));
     async function createFavorite(e) {
         e.preventDefault();
